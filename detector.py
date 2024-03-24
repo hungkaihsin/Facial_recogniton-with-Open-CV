@@ -1,21 +1,73 @@
 import cv2
 import matplotlib.pyplot as plt
+import tkinter as tk
+from tkinter import ttk
+from tkinter.constants import CENTER
+
+# root menu
+
+window = tk.Tk()
+window.title('GUI')
+window.geometry('455x140')
+window.resizable(False, False)
+window.iconbitmap('icon.ico')
+
+
+# Entry
+
+load_file = ttk.Entry(width=55)
+load_file.place(x=40, y=0)
 
 
 
+# buttom
+
+# Label
+lb_file_path = ttk.Label(text='Route', background='gray', foreground='white')
+lb_file_path.place(x=0, y=0)
+
+
+window.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# facial recognition function
+
+'''
 image_path = 'input_image.jpg'
 image = cv2.imread(image_path)
-'''
-print(image.shape)
 
-'''
+
+
 # in order to elavate the efficency, turn image to grayscale
 
 grey_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 '''
-
+'''
 print(grey_image.shape)
+
+'''
+
 
 '''
 
@@ -37,3 +89,5 @@ plt.figure(figsize = (20, 10))
 plt.imshow(rgb_image)
 plt.axis('off')
 plt.show()
+
+'''
