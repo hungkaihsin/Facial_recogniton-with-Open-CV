@@ -63,10 +63,18 @@ def detector():
     plt.axis('off')
     plt.show()
 
+def test():
+    image_path = Entry_load_file.get()
+    image = cv2.imread(image_path)
+    plt.imshow(image)
+    plt.show()
+
+
+
 # buttom
 Btn_select_file = ttk.Button(text='Select file', command= load_file)
 Btn_select_file.place(x=380, y=0)
-Btn_detect = ttk.Button(text="Detect", command=detector)
+Btn_detect = ttk.Button(text="Detect", command= detector)
 Btn_detect.place(x=230, y=60, anchor= CENTER)
 
 
